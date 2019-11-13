@@ -70,10 +70,19 @@ button:hover {
   background-color: #97e1ff;
 }
 
-ul {
-  list-style: none;
+.about-content {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  font-size: 20px;
 }
 
-li {
-  padding: 10px;
+.about-text a {
+  text-decoration: none;
+  color: #87ceeb;
 }
