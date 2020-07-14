@@ -14,8 +14,6 @@ Make just two API calls and get all your essential weather data for a specific l
 * CSS3
 * Heroku
 
-
-
 To access the app click the link below : 
 
 https://cnbuysal-weather-application.herokuapp.com/
