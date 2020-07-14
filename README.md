@@ -16,5 +16,6 @@ Make just two API calls and get all your essential weather data for a specific l
 
 
 
-To access the app enter the link below : 
+To access the app click the link below : 
+
 https://cnbuysal-weather-application.herokuapp.com/
