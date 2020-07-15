@@ -23,14 +23,14 @@ app.use(express.static(publicDirectoryPath));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
-    name: "Canberk Uysal"
+    name: "Canberk Uysal",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "About Me",
-    name: "Canberk Uysal"
+    title: "About",
+    name: "Canberk Uysal",
   });
 });
 
@@ -38,14 +38,14 @@ app.get("/help", (req, res) => {
   res.render("help", {
     message: "This section is under construction",
     title: "Help",
-    name: "Canberk Uysal"
+    name: "Canberk Uysal",
   });
 });
 
 app.get("/weather", (req, res) => {
   if (!req.query.adress) {
     return res.send({
-      error: "Please provide an adress"
+      error: "Please provide an adress",
     });
   }
   geocode(req.query.adress, (error, { latitude, longitude, location } = {}) => {
@@ -60,7 +60,7 @@ app.get("/weather", (req, res) => {
       res.send({
         forecast: forecastData,
         location,
-        adress: req.query.adress
+        adress: req.query.adress,
       });
     });
   });
@@ -69,7 +69,7 @@ app.get("/weather", (req, res) => {
 app.get("/products", (req, res) => {
   if (!req.query.search) {
     return res.send({
-      error: "You must provide a search term"
+      error: "You must provide a search term",
     });
   }
 
@@ -81,7 +81,7 @@ app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "404",
     name: "Canberk Uysal",
-    errorMessage: "Help article not found."
+    errorMessage: "Help article not found.",
   });
 });
 
@@ -89,7 +89,7 @@ app.get("*", (req, res) => {
   res.render("404", {
     title: "404",
     name: "Canberk Uysal",
-    errorMessage: "Page not found."
+    errorMessage: "Page not found.",
   });
 });
 
